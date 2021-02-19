@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact index{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row divMenu">
+
+            <div class="col-md-4">
+                <img src="/img/precario.png" alt="Los bros" tittle="Los bros">
+                <a href="{{ path('list', {'type': 'personal'}) }}">LosBros</a>
+            </div>
+
+            <div class="col-md-4">
+                <img src="/img/detodo.jpg" alt="Todos los contactos" tittle="People">
+                <a href="{{ path('list', {'type': 'all'}) }}">People</a>
+            </div>
+
+            <div class="col-md-4">
+                <img src="/img/negocios.png" alt="Business people" tittle="Business people">
+                <a href="{{ path('list', {'type': 'profesional'}) }}">Business people</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

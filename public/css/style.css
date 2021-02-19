@@ -1,0 +1,74 @@
+/*
+Container para el header y el footer,  le doy un alto, cambio los colores y el display flex para aplicar
+el space between y que los dos bloques de contenido queden a los extremos
+*/
+.containerHeaderFooter{
+    height: 150px;
+    background-color: #282c34;
+    color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Cambio de tamaño de fuente y color de texto a los hipervínculos de esa clase*/
+.containerHeaderFooter a{
+    color: lightgray;
+    font-size: 25px;
+}
+
+/*Magen izquierdo a los h1 de esa clase*/
+.containerHeaderFooter h1{
+    margin-left: 5%;
+}
+
+/*Magen derecho a los div de esa clase*/
+.containerHeaderFooter div{
+    margin-right: 5%;
+}
+
+/*Container donde sólo aplico margenes*/
+.divMenu{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*Alieno el texto de los divs dentro de esa clase*/
+.divMenu div{
+    text-align: center;
+}
+
+/*Establezco el tamaño de las imágenes de esa clase*/
+.divMenu img{
+    width: 300px;
+    height: 300px;
+}
+
+/*Clases de margenes*/
+.marginRightLittle {
+    margin-right: 20px;
+}
+
+.marginTopBottomLittle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.marginBottom button{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.marginBottom div{
+    margin-bottom: 20px;
+}
+
+/*Clases de padding inferior*/
+.paddinBottom{
+    padding-bottom: 150px;
+}
+
+/*Fozallada de turno para que el footer este abajo*/
+.turboFozalladaPrecaria{
+    position:absolute; 
+    width: 100%;
+}

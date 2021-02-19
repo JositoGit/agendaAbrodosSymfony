@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact list{% endblock %}
+
+{% block body %}
+    <div class="container marginTopBottomLittle paddinBottom">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                    <th>Note</th>
+                    <th>Changes</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for contact in list %}
+                {% if (typeContact==contact.type or typeContact=='all') %}
+                    <tr>
+                        <td>{{ contact.name }}</td>
+                        <td>{{ contact.surname }}</td>
+                        <td>{{ contact.phone }}</td>
+                        <td>{{ contact.email }}</td>
+                        {% if contact.type=='profesional' %}
+                            <td>
+                                <img src="/img/icononegocios.png" alt="Icono gente negocios">
+                            </td>
+                        {% else %}
+                            <td>
+                                <img src="/img/gentenormal.png" alt="Icono gente negocios">
+                            </td>
+                        {% endif %}
+                        <td>{{ contact.note }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ path('contact_show', 
+                                {'id': contact.id}) }}">Show</a>
+                            <a class="btn btn-warning" href="{{ path('contact_edit',
+                                {'id': contact.id}) }}">Edit</a>
+                        </td>
+                    </tr>
+                {% endif %}
+            {% else %}
+                <tr>
+                    <td colspan="8">No records, try to add a contact</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
